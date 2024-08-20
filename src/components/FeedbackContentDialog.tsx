@@ -9,7 +9,7 @@ type FeedbackContentDialogProps = {
 };
 
 const defaultBackgroundColor = '#ffffff';
-const defaultTextColor = '#303235';
+const defaultTextColor = '#000000';
 
 const FeedbackContentDialog = (props: FeedbackContentDialogProps) => {
   const [inputValue, setInputValue] = createSignal('');
@@ -36,7 +36,7 @@ const FeedbackContentDialog = (props: FeedbackContentDialogProps) => {
             class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none"
             style={{
               'background-color': props.backgroundColor ?? defaultBackgroundColor,
-              color: props.textColor ?? defaultTextColor,
+              color: defaultTextColor,
             }}
           >
             <div
@@ -78,7 +78,7 @@ const FeedbackContentDialog = (props: FeedbackContentDialogProps) => {
                 class="block p-2.5 rounded-lg border focus:ring-blue-500 focus:border-blue-500 bg-transparent flex-1 w-full feedback-input disabled:opacity-50 disabled:cursor-not-allowed disabled:brightness-100 font-normal"
                 style={{
                   border: '1px solid #eeeeee',
-                  color: props.textColor ?? defaultTextColor,
+                  color: defaultTextColor,
                 }}
                 placeholder="What do you think of the response?"
                 value={inputValue()}
