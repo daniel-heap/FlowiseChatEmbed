@@ -80,7 +80,7 @@ const FeedbackContentDialog = (props: FeedbackContentDialogProps) => {
                   border: '1px solid #eeeeee',
                   color: defaultTextColor,
                 }}
-                placeholder="What do you think of the response?"
+                placeholder="What do you think of the response TEST?"
                 value={inputValue()}
               />
             </div>
