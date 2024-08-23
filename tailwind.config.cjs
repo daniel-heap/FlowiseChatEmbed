@@ -43,10 +43,25 @@ module.exports = {
             },
             animation: {
                 'fade-in': 'fade-in 0.3s ease-out'
-            }
+            },
+            typography: {
+                DEFAULT: {
+                    css: {
+                      h1: {
+                        color: '#ffffff',
+                      },
+                      h2: {
+                        color: '#ffffff',
+                      },
+                      h3: {
+                        color: '#ffffff',
+                      }
+                    }
+                }
         }
     },
     plugins: [
       require('@tailwindcss/typography')
     ]
+}
 }
