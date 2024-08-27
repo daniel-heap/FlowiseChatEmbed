@@ -47,21 +47,15 @@ module.exports = {
             typography: {
                 DEFAULT: {
                     css: {
-                      h1: {
-                        color: '#ffffff',
-                      },
-                      h2: {
-                        color: '#ffffff',
-                      },
-                      h3: {
-                        color: '#ffffff',
-                      }
-                    }
-                }
+                        'h1, h2, h3, h4, h5, h6': {
+                            color: 'white',
+                        },
+                    },
+                },
+            },
         }
     },
     plugins: [
       require('@tailwindcss/typography')
     ]
-}
 }
