@@ -1,4 +1,4 @@
-import { createSignal, createEffect, For, onMount, Show, mergeProps, on, createMemo } from 'solid-js';
+import { createSignal, createEffect, For, onMount, Show, mergeProps, on, createMemo, requestCallback } from 'solid-js';
 import { v4 as uuidv4 } from 'uuid';
 import { sendMessageQuery, isStreamAvailableQuery, IncomingInput, getChatbotConfig, FeedbackRatingType } from '@/queries/sendMessageQuery';
 import { TextInput } from './inputs/textInput';
@@ -445,6 +445,20 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
 
     const currentUrl = window.location.href;
     value = currentUrl + ' || ' + value;
+
+    let gaClientId = ''
+
+    const cookieArr = document.cookie.split(';');
+  
+    for(let i = 0; i < cookieArr.length; i++) {
+      const cookiePair = cookieArr[i].split('=');
+    
+      if('_ga' === cookiePair[0].trim()) {
+        gaClientId = decodeURIComponent(cookiePair[1]);
+      }
+    }
+
+    value = value + ' || ' + gaClientId;
 
     const body: IncomingInput = {
       question: value,
