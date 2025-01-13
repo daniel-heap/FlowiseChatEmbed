@@ -765,14 +765,14 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
     const currentUrl = window.location.href;
     value = currentUrl + ' || ' + value;
 
-    let gaClientId = ''
+    let gaClientId = '';
 
     const cookieArr = document.cookie.split(';');
-  
-    for(let i = 0; i < cookieArr.length; i++) {
+
+    for (let i = 0; i < cookieArr.length; i++) {
       const cookiePair = cookieArr[i].split('=');
-    
-      if('_ga' === cookiePair[0].trim()) {
+
+      if ('_ga' === cookiePair[0].trim()) {
         gaClientId = decodeURIComponent(cookiePair[1]);
       }
     }
