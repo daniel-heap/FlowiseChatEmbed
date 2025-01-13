@@ -5,6 +5,8 @@ export type BubbleTheme = {
     chatWindow?: ChatWindowTheme;
     button?: ButtonTheme;
     tooltip?: ToolTipTheme;
+    disclaimer?: DisclaimerPopUpTheme;
+    customCSS?: string;
 };
 export type TextInputTheme = {
     backgroundColor?: string;
@@ -46,6 +48,8 @@ export type ChatWindowTheme = {
     showAgentMessages?: boolean;
     title?: string;
     titleAvatarSrc?: string;
+    titleTextColor?: string;
+    titleBackgroundColor?: string;
     welcomeMessage?: string;
     errorMessage?: string;
     backgroundColor?: string;
@@ -58,9 +62,13 @@ export type ChatWindowTheme = {
     textInput?: TextInputTheme;
     feedback?: FeedbackTheme;
     footer?: FooterTheme;
+    sourceDocsTitle?: string;
     poweredByTextColor?: string;
     starterPrompts?: string[];
     starterPromptFontSize?: number;
+    clearChatOnReload?: boolean;
+    dateTimeToggle?: DateTimeToggleTheme;
+    renderHTML?: boolean;
 };
 export type ButtonTheme = {
     size?: 'small' | 'medium' | 'large' | number;
@@ -83,5 +91,21 @@ export type autoWindowOpenTheme = {
     autoOpen?: boolean;
     openDelay?: number;
     autoOpenOnMobile?: boolean;
+};
+export type DisclaimerPopUpTheme = {
+    title?: string;
+    message?: string;
+    textColor?: string;
+    buttonColor?: string;
+    buttonTextColor?: string;
+    buttonText?: string;
+    blurredBackgroundColor?: string;
+    backgroundColor?: string;
+    denyButtonBgColor?: string;
+    denyButtonText?: string;
+};
+export type DateTimeToggleTheme = {
+    date?: boolean;
+    time?: boolean;
 };
 //# sourceMappingURL=types.d.ts.map
