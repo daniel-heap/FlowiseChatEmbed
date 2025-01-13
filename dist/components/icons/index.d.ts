@@ -9,4 +9,6 @@ export * from './SendIcon';
 export * from './TrashIcon';
 export * from './XIcon';
 export * from './TickIcon';
+export * from './AttachmentIcon';
+export * from './SparklesIcon';
 //# sourceMappingURL=index.d.ts.map
